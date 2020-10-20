@@ -8,8 +8,8 @@ services:
       dockerfile: ./Dockerfile
     container_name: bios
     environment:
-      - EOS_PUB_KEY
-      - EOS_PRIV_KEY
+      EOS_PUB_KEY: "${EOS_PUB_KEY}"
+      EOS_PRIV_KEY: "${EOS_PRIV_KEY}"
     volumes:
       - ../services/bios:/opt/application
     image: ${IMAGE_NAME}:${VERSION}
@@ -25,8 +25,8 @@ services:
       dockerfile: ./Dockerfile
     container_name: validator1
     environment:
-      - EOS_PUB_KEY
-      - EOS_PRIV_KEY
+      EOS_PUB_KEY: "${EOS_PUB_KEY}"
+      EOS_PRIV_KEY: "${EOS_PRIV_KEY}"
     volumes:
       - ../services/validator1:/opt/application
     image: ${IMAGE_NAME}:${VERSION}
@@ -39,8 +39,8 @@ services:
       dockerfile: ./Dockerfile
     container_name: validator2
     environment:
-      - EOS_PUB_KEY
-      - EOS_PRIV_KEY
+      EOS_PUB_KEY: "${EOS_PUB_KEY}"
+      EOS_PRIV_KEY: "${EOS_PRIV_KEY}"
     volumes:
       - ../services/validator2:/opt/application
     image: ${IMAGE_NAME}:${VERSION}
@@ -51,8 +51,8 @@ services:
       dockerfile: ./Dockerfile
     container_name: validator3
     environment:
-      - EOS_PUB_KEY
-      - EOS_PRIV_KEY
+      EOS_PUB_KEY: "${EOS_PUB_KEY}"
+      EOS_PRIV_KEY: "${EOS_PRIV_KEY}"
     volumes:
       - ../services/validator3:/opt/application
     image: ${IMAGE_NAME}:${VERSION}
